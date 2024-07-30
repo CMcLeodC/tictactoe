@@ -1,12 +1,81 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* 
+/* Center the board on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+/* Style the board container */
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-*/
+/* Style the rows of the board */
+.board-row {
+    display: flex;
+}
+
+/* Style the individual squares */
+.square {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px; /* Vertically center text */
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s, border 0.3s;
+}
+
+.square:hover {
+    background: #f9f9f9;
+}
+
+.square:focus {
+    border-color: #4a90e2;
+}
+
+/* Style the status text */
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style the restart button */
+.restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.restart:hover {
+    background-color: #357abd;
+}
+
+.restart:focus {
+    outline: none;
+}
